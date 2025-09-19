@@ -1,0 +1,212 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: whitesmoke;
+  font-weight: bold;
+  font: 'Apple SD Gothic Neo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.submit {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;             
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  background: none;
+}
+
+.submit::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/mountainlinebackdrop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(0.4);
+  z-index: -1;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: flex-end; 
+  padding: 1.0rem;
+  margin-top:-8px;
+  z-index: 1;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.navbar a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.submitDelay {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
+.submitDelay h1 {
+  font-size: 4rem;
+  top: -10px;
+}
+
+.clock {
+    font-size: 2.25rem;
+    display: flex;
+    position: relative;
+    margin-left: 50px;
+    margin-top: -75px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.form-group select {
+  width: 25rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.form-group select:focus {
+  border-color: #007108;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 113, 8, 0.5);
+}
+
+.form-group textarea {
+  width: 25rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.form-group textarea:focus {
+  border-color: #007108;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 113, 8, 0.5);
+}
+
+.word-count {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.loading {
+  width: 25rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #007108;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #007108;
+  border-radius: 4px;
+}
+
+.error {
+  width: 25rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #d2232a;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #d2232a;
+  border-radius: 4px;
+} 
+
+.button {
+  display: flex;
+  justify-content: center;
+  /* this might be a bad idea but i cant get it to go up any higher :( -grace*/
+  margin-top: 0.000000001rem;
+  margin-bottom: 1rem;
+}
+
+.button button {
+  width: 15rem;
+  height: 1.8rem;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  border-color:rgba(0, 113, 8, 0.5);
+  transform: scale(1.3);
+}
+
+.button button:hover:not(:disabled) {
+  background-color: rgba(0, 113, 8, 0.5);
+  color: whitesmoke;
+}
+
+.button button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status-message {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.status-message.success {
+  color: #28a745;
+}
+
+.status-message.error {
+  color: #dc3545;
+} 
+
